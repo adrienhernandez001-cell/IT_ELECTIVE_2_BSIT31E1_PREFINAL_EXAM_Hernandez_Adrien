@@ -1,0 +1,27 @@
+﻿@model List<IT_ELECTIVE_2_BSIT31E1_PREFINAL_EXAM_Hernandez_Adrien.Models.Question>
+
+@{
+    ViewData["Title"] = "Prefinal Examination";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">IT Elective 2 – Prefinal Examination</h1>
+
+    <div class="text-center mb-5">
+        <h5>Adrien Hernandez | BSIT31E1</h5>
+    </div>
+
+    @foreach (var question in Model)
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Question @question.Number</h5>
+                <p class="card-text">@question.QuestionText</p>
+
+                <div class="alert alert-success">
+                    <strong>Answer:</strong> @question.Answer
+                </div>
+            </div>
+        </div>
+    }
+</div>
